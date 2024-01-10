@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Salsa";
+  --bg-url: url(./img/bg.png);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100%;
+}
+
+header h1 {
+  margin: 0 1rem;
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  display: flex;
+  padding: 1rem 0.5rem;
+  gap: 1rem;
+  background-color: #e7bbb9;
+  border-radius: 2rem;
+  max-width: 35.6rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  border: white 2px solid;
+}
+
+.card .photos {
+  max-width: 16rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 2rem;
+  margin: auto;
+  border: white 2px solid;
+}
+
+.card p {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+footer h1 {
+  margin: 0 1rem;
+  font-size: 3.5rem;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+.item {
+  --delay: 0.2s;
+  animation: appear 0.4s var(--delay) backwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
